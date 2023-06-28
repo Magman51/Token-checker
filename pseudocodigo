@@ -1,0 +1,54 @@
+importar axios
+importar colors
+importar readline
+
+crear rl como una nueva interfaz de readline
+
+función asincrónica obtenerDatosDeUsuario(token):
+    intentar:
+        respuesta = esperar axios.get('https://discordapp.com/api/v9/users/@me', {
+            encabezados: {
+                Autorización: token
+            }
+        })
+
+        mostrar 'Token válido.' en color rojo
+        mostrar 'Correo:' en color rojo, data.email en color amarillo
+        mostrar 'Número:' en color rojo, data.phone o 'No disponible' en color amarillo
+        mostrar 'Usuario:' en color rojo, data.username#data.discriminator (data.id) en color amarillo
+
+        userData = {
+            token: token sin comillas alrededor de la token,
+            correo: data.email,
+            numero: data.phone o 'No disponible',
+            usuario: data.username#data.discriminator,
+            revisado: verdadero
+        }
+
+        retornar userData
+    atrapar error:
+        mostrar 'Error:', error.mensaje en color rojo
+        retornar nulo
+
+mostrar el banner en color rojo
+
+preguntar 'Ingrese el token que desea revisar: ' al usuario usando rl, después de eso, ejecutar la siguiente función asincrónica:
+(token):
+    si no hay token:
+        mostrar 'Token no válido.' en color rojo
+        cerrar rl
+    de lo contrario:
+        reemplazar las comillas alrededor del token
+        mostrar una línea vacía
+        mostrar 'Token en revisión:' en color rojo, token en color amarillo
+        mostrar una línea vacía
+
+        userData = esperar obtenerDatosDeUsuario(token)
+
+        si userData existe:
+            mostrar una línea vacía
+            mostrar '=== Revisión de Tokens finalizada ==='
+            mostrar una línea vacía
+            mostrar 'Usuarios revisados: 1' en color rojo
+
+        cerrar rl

@@ -1,0 +1,9 @@
+Token Checker
+Token Checker es un script de Node.js que verifica la validez de un token de Discord y muestra información del usuario asociado a ese token.
+Requisitos previos
+Antes de ejecutar el script, asegúrate de tener instalado Node.js en tu sistema.
+tener las librerias necesarias.
+Una vez tengas todas las librerias vas a poner el siguiente texto
+"node ."
+despues se abrira la consola y pondras la token a revisar y listo disfruta
+clase del proyecto-basica
