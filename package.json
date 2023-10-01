@@ -1,12 +1,12 @@
 {
   "name": "token-checker2.0",
   "version": "1.0.0",
-  "description": "token checker creado por el equipo de HypeThreads(nivel-basico)",
+  "description": "Script (nivel-basico)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "nebularky",
+  "author": "zelensky_16",
   "server": "https://discord.gg/hypethreads",
   "license": "ISC",
   "dependencies": {
